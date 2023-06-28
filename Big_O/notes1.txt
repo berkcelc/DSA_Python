@@ -1,0 +1,24 @@
+Time Complexity of the code
+
+Space Complexity of the code
+
+(O) - Worst case Complexity
+Omega - Complexity more than the Best case scenario
+
+O(1) - Constant time Complexity
+eg. Getting a random card from a deck
+
+O(n) - Linear time Complexity
+eg. Getting a specific card from a deck
+We need to drop constants from the set
+
+It is very much possible that O(n) code is faster than O(1) for 
+some specific inputs
+
+O(n^2) - Quadratic time Complexity
+eg. Check duplicate cards in a deck 
+
+O(nlog(n)) = Log time Complexity
+eg. Divide and Conquer algorithm
+
+Space Complexity
