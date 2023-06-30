@@ -1,0 +1,25 @@
+We can concatenate two lists using + operator
+
+repeat the element of the list using * operator
+
+max()
+min()
+sum(list)
+
+Similarities between lists and arrays
+
+1. both are mutable
+2. both can be indexed and iterated
+3. both can be sliced
+
+Difference between lists and arrays
+datatypes have to be Similar in arrays
+
+List Comprehension also works for 
+
+List
+Range
+String
+Tuples
+
+
