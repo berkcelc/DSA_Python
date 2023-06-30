@@ -22,3 +22,22 @@ We cannot Add single element , we need to ad either a row or a column
 
 Adding a column - Time complexity - O(mn)
 Adding a row - Time complexity - O(nm)
+
+Space Complexity for addition row/ column - O(mn)
+
+
+### deletion of a column or a row
+for deletion we select the column that is required and similar for the row
+
+Time complexity - O(mn)
+Space complexity - O(nm)
+
+
+When to use and avoid using array
+
+for variables of different data types
+Array reserves a memory in the memory pool which affects the performance 
+of the application
+
+
+

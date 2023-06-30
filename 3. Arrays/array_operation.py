@@ -49,8 +49,12 @@ np.insert(twodarray,2,[9,10,11], axis=0)
 
 # carefully notice the below statements 
 
-np.append(twodarray,[[12,13,14]], axis=0)
-np.append(twodarray,[[12],[13]], axis=1)
+twodarray = np.append(twodarray,[[12,13,14]], axis=0)
+twodarray = np.append(twodarray,[[12],[13],[14]], axis=1)
 
+twodarray = np.delete(twodarray, 1, axis=0)
+twodarray = np.delete(twodarray, 2, axis=1)
+
+twodarray
 
 
