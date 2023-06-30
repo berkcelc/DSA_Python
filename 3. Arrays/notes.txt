@@ -1,0 +1,24 @@
+Getting an element from the array
+
+element = array[index]
+
+
+# Search for an element in the array
+1. Linear search
+
+Time complexity - O(n)
+Space Complexity - O(1)
+
+# Deleting an element from the array
+After deletion of an element from the array, the subsequent element will be moved one left
+
+Time complexity - O(n)
+Space Complexity - O(1)
+
+
+### Working with multidimentional arrays
+
+We cannot Add single element , we need to ad either a row or a column
+
+Adding a column - Time complexity - O(mn)
+Adding a row - Time complexity - O(nm)
