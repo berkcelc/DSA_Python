@@ -1,0 +1,71 @@
+works on the key value pairs and are mutable
+
+We can create a new dictionary in several different ways
+
+1. my_dict = dict(one='one', two='two', three='three')
+2. my_dict1 = {'one': 'one', 'two': 'two', 'three':'three'}
+3. my_dict2 = dict([('one','one'), ('two','two'), ('three','three')])
+4. 
+
+
+Time complexity of creaating O(n)
+Space Complexity = O(n)
+
+
+Dictionary in Memory
+
+Time complexity of adding a dictionary : O(1)/ O(n) - rarely
+Space Complexity = amortized O(1)
+
+Traversing an element in a dictionary
+
+Time complexity O(n)
+Space Complexity = O(1)
+
+
+Deleting an element in a dictionary
+
+removed_element = my_dict.pop(key)
+
+Time complexity O(1)
+Space Complexity = O(1)
+
+my_dict.popitem()
+Time complexity O(1)
+Space Complexity = O(1)
+
+my_dict.clear()
+Time complexity O(n)
+
+the symtax of fromkeys() method is
+
+dict.fromkeys(sequence[], value)
+
+# Get method
+
+
+dict.get(key, value) #  the key is used to fetch the value and the value is default in case the 
+key is not found in the dictionary
+
+# setdefault method for adding the value of key in case the key is not found, if the key is 
+found, it'll just return the value 
+
+# update method for adding the value of key in case the key is not found, if the key is found
+it will change the value to the new value
+
+
+
+"""
+Dictionary Comprehension
+"""
+
+# from list
+new_dict = {new_key: new_value for item in list}
+
+
+# from dictionary itself
+
+new_dict = {new_key: new_value for (key, value) in old_dict.items()}
+
+
+
