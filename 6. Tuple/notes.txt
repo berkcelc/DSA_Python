@@ -1,0 +1,14 @@
+When we create a single element tuple, we need to put a , at the end
+
+Tuples in memory
+
+we cannot modify the element in the tuple as they are immutable
+
+Traversing Time Complexity - O(n)
+Space Complexity - O(1)
+
+Tuple Operation
+
+- we generally use tuples for heterogeneous data types and lists for homogeneous data types
+iterating over the tuple is faster than iterating over lists
+Tuples can be used as a key for dictionaries
