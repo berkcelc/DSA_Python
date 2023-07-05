@@ -1,0 +1,38 @@
+
+basically for code reusability
+
+Attributes are basically variables that are associated with objects
+Methods are functions that are associated with objects 
+
+All objects have
+
+    1. Identity
+    2. Attributes
+    3. Behaviors
+
+A class is a detailed representation of what an object will be but it is not itseld an object.
+
+
+
+A block of code or program procedure that can be called to perform some actions and it may return a value
+
+Methods are defined as part of class
+
+the attributes are declared as part of the class, which are decalred at the time of creation of objects
+
+The important part of creating a new object is Initializer,
+    
+    
+    in python we can do it by __init__ method.
+    def __init__(self):          # noramallyu used to initialize the attributes
+        # initialize attributes
+
+There are two attributes, class attributes and object attributes.
+
+The class attributes are shared by all the objects created by using the class
+The object attributes belong only to the perticular object.
+
+If we change the class attributes we will also be changeing the object attributes simultaneously.
+But if we change the object attributes that belong to the class, we wont be able to change it by changing class attributes
+
+methods are the Behaviors of the object.
