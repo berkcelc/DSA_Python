@@ -1,0 +1,10 @@
+Linked List - A form of sequential collection of data. any data, which are independent. Each node has
+reference to the next node.
+
+
+Types of Linked lists
+1. Singly Linked List
+2. Circular Singly Linked List
+3. Double Linked List
+4. Circular Double Linked List
+
