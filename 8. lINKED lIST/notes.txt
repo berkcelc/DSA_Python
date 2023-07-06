@@ -8,3 +8,14 @@ Types of Linked lists
 3. Double Linked List
 4. Circular Double Linked List
 
+Linked List in Memory
+
+node class
+
+How to identify if a Linked List is empty or not 
+
+1. The length of the linked list - if its 0
+2. The head of the linked List should point to None
+
+
+
