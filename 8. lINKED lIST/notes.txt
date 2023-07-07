@@ -17,5 +17,50 @@ How to identify if a Linked List is empty or not
 1. The length of the linked list - if its 0
 2. The head of the linked List should point to None
 
+Here's how we declare a node and then a linked list
 
+1. We create a node that takes in a value and the next pointer at the time of initialization
+is set to none. The next pointer is pointed by the linked list at the time of creation
+
+2. LinkedList is then initialized to have null value
+
+3. The head is then set to the first value and the tail is also set to the same value
+4. In case a node is added, the last pointer is set to the address of new node and the
+tail is then updated to point to the new node
+
+5. Finaly the length of the linked list is updated by 1
+
+
+
+# changing the __str__ inbuilt method for the linked list class that we created to display all the nodes value 
+and their  pointing value.
+
+We start with head and take its value in a blank string
+In case the pointer for that node is not set to None, we add a '->' to the string and 
+move on the the next node and get the value.
+We implement the above logic using while and if statements
+
+# adding a new node to the linked list at the head of the list (at the start of the list)
+
+we create a new node
+
+if the linked list is empty, we add a new node as we regularily do
+if the list is not empty,
+    we update the new node's pointer to the head of the list
+    then we move the head of linked list to the new node
+
+
+Time complexity for adding a new node to start of the list - O(1)
+Space complexity for adding a new node to start of the list - O(1)
+
+# Inserting a new node at a given location
+go to the given location by iterating over the list
+    take the node pointer's prev location and update it to the new node
+    updade the new_ node's location to the previous node's pointer
+
+
+# traversing through linked list
+
+start with the head and move to the next location iteratively until none
+and printing out the value
 
