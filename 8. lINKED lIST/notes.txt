@@ -78,3 +78,6 @@ Here are the operations we may perform on and with Linked List
 
 For all the use cases, we need to see the edge cases and check if the corner cases holds.
 
+
+
+Note the logic behind reversing the order of the elements in LinkedList
