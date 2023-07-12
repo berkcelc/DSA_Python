@@ -1,0 +1,7 @@
+def __iter__(self):: Defines a method called __iter__ which makes an object iterable. 
+Python calls the object's __iter__ method when a for-loop is used with the object.
+
+node = self.head: Initializes a variable node to be the head of the list, which is the starting point for iteration.
+
+yield node: Uses the yield keyword to define a generator. yield produces a value and suspends the function’s execution.
+ The function can then be resumed from where it left off, thus allowing it to produce a series of values over time.
