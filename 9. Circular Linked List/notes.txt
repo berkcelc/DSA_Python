@@ -5,3 +5,6 @@ node = self.head: Initializes a variable node to be the head of the list, which 
 
 yield node: Uses the yield keyword to define a generator. yield produces a value and suspends the function’s execution.
  The function can then be resumed from where it left off, thus allowing it to produce a series of values over time.
+
+
+The circular linked List has a break point once it reaches to the head.
