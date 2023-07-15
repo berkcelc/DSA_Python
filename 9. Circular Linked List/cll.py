@@ -27,8 +27,69 @@ class CircularSinglyLinkedList:
         self.tail = node
         return "The CSLL has been created"
     
+    # adding an element to the csll
+    def append(self, value):
+        new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+            self.tail = new_node
+            new_node.next = self.head
+            return "The CSLL has been created"
+            
+        else:
+            self.tail.next = new_node
+            self.tail = new_node
+            new_node.next = self.head
+        # self.length += 1
+
+    def add_at_start(self, value):
+        new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+            self.tail = new_node
+            new_node.next = self.head
+        else:
+            new_node.next = self.head
+            self.head = new_node
+            self.tail.next = new_node
+
+
+    def add_at_position(self,position, value):
+        new_node = Node(value)
+
+        if self.head is None:
+            self.head = new_node
+            self.tail = new_node
+            new_node.next = self.head
+
+        elif position == 0:
+            new_node.next = self.head
+            self.head = new_node
+            self.tail.next = new_node
+
+        else:
+            pos_node = self.head
+            for _ in range(position - 1):
+                pos_node = pos_node.next
+            
+            new_node.next = pos_node.next
+            pos_node.next = new_node
+
+    
 circulrSLL = CircularSinglyLinkedList()
+
+circulrSLL.add_at_position(0, 14)
+
 circulrSLL.create(1)
+
+circulrSLL.append(2)
+circulrSLL.append(3)
+circulrSLL.append(4)
+circulrSLL.append(5)
+
+
+circulrSLL.add_at_start(0)
+
 
 
 # for this reason we used the Iter tool
