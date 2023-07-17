@@ -67,6 +67,12 @@ class CircularSinglyLinkedList:
             self.head = new_node
             self.tail.next = new_node
 
+        # what if the position is the last element
+        elif position == -1:
+            new_node.next = self.head
+            self.tail.next = new_node
+            self.tail = new_node
+
         else:
             pos_node = self.head
             for _ in range(position - 1):
