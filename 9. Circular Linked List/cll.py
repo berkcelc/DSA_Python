@@ -81,7 +81,36 @@ class CircularSinglyLinkedList:
             new_node.next = pos_node.next
             pos_node.next = new_node
 
-    
+
+
+    def traverse(self):
+        if self.head is None:
+            print("The CSLL is empty")
+        else:
+            tempnode = self.head
+            while tempnode:
+                print(tempnode.value)
+                tempnode = tempnode.next
+                if tempnode == self.tail.next:
+                    break
+
+
+    def search_element(self, number):
+        print(number)
+        if self.head is None:
+            print("The csll is empty") 
+        else:
+            temp_ = self.head
+            
+            while temp_:
+                if temp_.value == number:
+                    return "The value exists"
+                temp_ = temp_.next
+                if temp_ == self.tail.next:
+                    return "The value does not exist"
+
+
+
 circulrSLL = CircularSinglyLinkedList()
 
 circulrSLL.add_at_position(0, 14)
@@ -100,3 +129,9 @@ circulrSLL.add_at_start(0)
 
 # for this reason we used the Iter tool
 [node.value for node in circulrSLL]
+
+circulrSLL.traverse()
+
+circulrSLL.search_element(4)
+
+
