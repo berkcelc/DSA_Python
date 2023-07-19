@@ -17,3 +17,16 @@ Space Complexity - O(1)
 Working with csll
 
 1. Adding an element to the csll at different position
+
+
+
+Methods of deletion of csll 
+
+1. Deletion of first node
+2. Deletion of a given node
+3. Deletion of last node
+
+To delete all the elements of csll, we need to change three references
+self.head = None
+self.tail.next = None
+self.tail = None
