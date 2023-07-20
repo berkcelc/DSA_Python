@@ -1,0 +1,5 @@
+Creating a node class that has next and previous values
+Creating a double linked list that initiates with blank node and 
+then creating methods for addition of data and addition of nodes
+
+
