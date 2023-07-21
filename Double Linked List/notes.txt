@@ -2,4 +2,14 @@ Creating a node class that has next and previous values
 Creating a double linked list that initiates with blank node and 
 then creating methods for addition of data and addition of nodes
 
+while creating the first node 
+we define the node and assign the head and the tail to the same node'
+
+while appending the element to the linked list we check if the head is None
+
+create a new node
+else we go to the tail and we add the element there and add the node there
+
+
+
 

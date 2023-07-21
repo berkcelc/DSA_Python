@@ -101,7 +101,7 @@ class CircularSinglyLinkedList:
             print("The csll is empty") 
         else:
             temp_ = self.head
-            
+
             while temp_:
                 if temp_.value == number:
                     return "The value exists"
