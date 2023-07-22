@@ -115,6 +115,29 @@ class DoubleLinkedList:
         self.tail = None
 
 
+    def reverse(self):
+
+        c_node = self.head
+        self.tail = self.head
+        while c_node:
+            
+            """
+            I was facing a decent amount of challange here as 
+            at the tail, I was setting the head to None which was the step in the last one,
+            Needed to insert an if statement to change the narrative
+            """
+            if c_node.next is None:
+                self.head = c_node
+            
+            next = c_node.next
+            c_node.next = c_node.prev
+            c_node.prev = next
+            c_node = next
+            print(next)
+            
+        # self.head = c_node
+        # print(c_node.value, self.tail.value)
+
 
 
 
@@ -128,7 +151,10 @@ dll.append(4)
 dll.add_node(7,3)
 dll.traverse()
 dll.search_element(3)
-dll.delete_element(2)
-dll.delete_all()
+# dll.delete_element(2)
+# dll.delete_all()
 
 [node.value for node in dll]
+
+dll.reverse()
+
