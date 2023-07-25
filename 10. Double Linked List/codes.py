@@ -127,6 +127,29 @@ class DoubleLinkedList:
         self.head = c_node
 
 
+    def reverse(self):
+
+        c_node = self.head
+        self.tail = self.head
+        while c_node:
+            
+            """
+            I was facing a decent amount of challange here as 
+            at the tail, I was setting the head to None which was the step in the last one,
+            Needed to insert an if statement to change the narrative
+            """
+            if c_node.next is None:
+                self.head = c_node
+            
+            next = c_node.next
+            c_node.next = c_node.prev
+            c_node.prev = next
+            c_node = next
+            print(next)
+            
+        # self.head = c_node
+        # print(c_node.value, self.tail.value)
+
 
 
 
