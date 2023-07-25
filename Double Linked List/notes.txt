@@ -11,5 +11,7 @@ create a new node
 else we go to the tail and we add the element there and add the node there
 
 
+The time complexity for Insertion - O(n)
+Space Complexity O(1)
 
 

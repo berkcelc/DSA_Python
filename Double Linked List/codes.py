@@ -114,6 +114,18 @@ class DoubleLinkedList:
         self.head = None
         self.tail = None
 
+    def reverse_list(self):
+        prev = None
+        c_node = self.head
+        self.tail = self.head
+        while c_node:
+            print(c_node.value)
+            next = c_node.next
+            c_node.next = c_node.prev
+            c_node.prev = next
+            c_node = next
+        self.head = c_node
+
 
 
 
@@ -128,7 +140,11 @@ dll.append(4)
 dll.add_node(7,3)
 dll.traverse()
 dll.search_element(3)
-dll.delete_element(2)
-dll.delete_all()
+# dll.delete_element(2)
+# dll.delete_all()
+
+dll.reverse_list()
 
 [node.value for node in dll]
+
+
