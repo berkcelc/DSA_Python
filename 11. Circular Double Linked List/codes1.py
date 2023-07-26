@@ -39,41 +39,59 @@ class CircularDoublyLinkedList:
                 self.tail.next = new_node
                 self.head = new_node
 
-            if location == -1:
-                self.tail.next = new_node
-                self.head.prev = new_node
+            elif location == -1:
+                new_node.next = self.head
                 new_node.prev = self.tail
+                self.head.prev = new_node
+                self.tail.next = new_node
                 self.tail = new_node
 
             else:
-                c_node = self.head
+                temp_node = self.head
                 for _ in range(location - 1):
-                    c_node = c_node.next
-                c_node.next.prev = new_node
-                new_node.next = c_node.next
-                new_node.prev = c_node
-                c_node.next = new_node
-
-    def traverse(self):
-        c_node = self.head
-        while c_node:
-            print(c_node.value)
-            c_node = c_node.next
-            if c_node == self.head:
-                break
+                    temp_node = temp_node.next
+                new_node.next = temp_node.next
+                new_node.prev = temp_node
+                new_node.next.prev = new_node
+                temp_node.next = new_node
 
             # return "The node has been successfully inserted"
         
+
+    def traverse(self):
+        if self.head is None:
+            return "There is no node for traversal"
+        else:
+            tempnode = self.head
+            while tempnode:
+                print(tempnode.value)
+                if tempnode == self.tail:
+                    break
+                tempnode = tempnode.next
+
+    def reversetraverse(self):
+        if self.head is None:
+            print("There is not any node for reverse traversal")
+        else:
+            tempnode = self.tail
+            while tempnode:
+                print(tempnode.value)
+                if tempnode == self.head:
+                    break
+                tempnode =tempnode.prev
+
+                
 
 cdll = CircularDoublyLinkedList()
 
 cdll.create(5)
 cdll.insert(7,0)
-# cdll.insert(6,-1)
+cdll.insert(6,-1)
 cdll.insert(5,1)
 
 
 [node.value for node in cdll]
 
+cdll.traverse()
 
 
