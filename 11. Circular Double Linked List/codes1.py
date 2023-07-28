@@ -69,6 +69,19 @@ class CircularDoublyLinkedList:
                     break
                 tempnode = tempnode.next
 
+
+    def search(self,value):
+        if self.head is None:
+            return "There is no element in this list"
+        else:
+            c_node  = self.head
+            while c_node:
+                if c_node.value == value:
+                    return " the value exists in the list"
+                if c_node.next == self.head:
+                    return "the value does not exists"
+
+
     def reversetraverse(self):
         if self.head is None:
             print("There is not any node for reverse traversal")
@@ -95,3 +108,4 @@ cdll.insert(5,1)
 cdll.traverse()
 
 
+cdll.search(6)
