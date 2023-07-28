@@ -80,7 +80,7 @@ class CircularDoublyLinkedList:
                     return " the value exists in the list"
                 if c_node.next == self.head:
                     return "the value does not exists"
-
+                c_node= c_node.next
 
     def reversetraverse(self):
         if self.head is None:
