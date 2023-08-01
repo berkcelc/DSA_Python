@@ -51,10 +51,3 @@ class LinkedList:
         for i in range(n):
             self.add(randint(min_value, max_value))
         return self
-
-cll = LinkedList()
-
-cll.generate(12,0,90)
-
-print(cll)
-
