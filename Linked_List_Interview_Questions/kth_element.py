@@ -22,6 +22,8 @@ kth_element_from_end(cll,2)
 # using two pointer method
 
 def kth_element_from_end_pointer(ll,k):
+
+    # This has O(n) time complexity
     p1 = ll.head
     p2 = ll.head
 

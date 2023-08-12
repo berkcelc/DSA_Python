@@ -45,6 +45,16 @@ class LinkedList:
             self.tail = self.tail.next
         return self.tail
     
+    def preadd(self, value):
+        newNode = Node(value)
+        if self.head is None:
+            self.head = newNode
+            self.tail = newNode
+        else:
+            newNode.next = self.head
+            self.head = newNode
+
+    
     def generate(self, n, min_value, max_value):
         self.head = None
         self.tail = None
