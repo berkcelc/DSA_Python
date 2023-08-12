@@ -1,4 +1,4 @@
 {
-    "codeium.enableCodeLens": true,
-    "codeium.detectProxy": true
+    "codeium.enableCodeLens": false,
+    "codeium.detectProxy": false
 }

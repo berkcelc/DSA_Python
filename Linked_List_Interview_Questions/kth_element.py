@@ -17,3 +17,23 @@ def kth_element_from_end(ll,k):
     return element_set[-k+1]
 
 kth_element_from_end(cll,2)
+
+
+# using two pointer method
+
+def kth_element_from_end_pointer(ll,k):
+    p1 = ll.head
+    p2 = ll.head
+
+    for i in range(k):
+        if p2 is None:
+            return 'Less elements'
+        else:
+            p2 = p2.next
+
+    while p2:
+        p1 = p1.next
+        p2 = p2.next
+    return p1.value
+
+kth_element_from_end_pointer(cll, 2)
