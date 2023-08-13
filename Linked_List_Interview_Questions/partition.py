@@ -32,3 +32,23 @@ new_ll = partition_ll(cll, 50)
 
 print(new_ll)
 
+
+# without creating a new Linked List 
+
+def partition2(ll, part):
+    c_node = ll.head
+    ll.tail = ll.head
+
+    while c_node:
+        next_node = c_node.next
+        c_node.next = None
+        if c_node.value < part:
+            c_node.next = ll.head
+            ll.head = c_node
+        else:
+            ll.tail.next = c_node
+            ll.tail = c_node
+        c_node = next_node
+
+    if ll.tail.next is not None:
+        ll.tail.next = None
