@@ -46,9 +46,15 @@ class Stack:
             return "There is no element"
         else:
             c_node = self.LinkedLlist.head
-            self.head = self.LinkedLlist.head.next
+            self.LinkedLlist.head = self.LinkedLlist.head.next
             c_node.next = None
             return c_node.value
+        
+    def peep(self):
+        if self.isEmpty():
+            return "There is no element in the stack"
+        else:
+            return self.LinkedLlist.head.value
 
 
 stk = Stack()
@@ -56,4 +62,5 @@ stk = Stack()
 stk.push(10)
 stk.push(9)
 stk.pop()
+stk.peep()
 print(stk)
