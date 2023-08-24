@@ -62,8 +62,6 @@ stk.push(20)
 stk.push(15)
 stk.push(17)
 stk.push(8)
-stk.push(3)
-stk.push(2)
 
 stk.get_min()
 stk.pop()
