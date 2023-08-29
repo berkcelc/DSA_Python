@@ -1,0 +1,5 @@
+for the recursion function that calls itself only once - Time complexity is O(n)
+
+for functions that calls itself twice - O(2^n)
+
+for functions that calls itself n times - O(n^n)
