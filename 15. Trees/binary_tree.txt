@@ -1,0 +1,16 @@
+Binary trees are data structure which can have at most two child elements
+
+Its a class of data structure
+
+Types of Binary Tree
+
+1. Full Binary Tree (either 2 or 0 child elements)
+2. Perfect Binary tree (all nodes at same level and have 2 child elemens and all leaf are at same level)
+3. Complete Binary Tree (all levels are full as leftmost as possible)
+4. Balanced Binary Tree - All nodes are at same distance from the node
+
+binary Tree Representation
+
+- Linked List
+- Python List
+

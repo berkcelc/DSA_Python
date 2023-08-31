@@ -1,0 +1,22 @@
+A tree is a nonlinear data structure with hierarchical relationships between its elements
+without having any cycle. 
+Properties of Tree data structure
+
+1. Represents hierarchical data
+2. Each node has two components , data ans a link to its sub category
+3. Base category and sub category
+
+Why do we need tree data structure?
+
+- Quicker and easier axxess to data
+- hierchical data structure
+- There are different types of data structures which performs better in various situations
+
+Tree Terminologies
+
+root - Node without parent
+edge, leaf,sibling
+ancestor
+dapth of node (node to root)
+Height of Node (node to leaf)
+Height of tree
