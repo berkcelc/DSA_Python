@@ -10,8 +10,6 @@ on the binary tree using linked List
 6. Deletion of tree
 """
 
-from typing import Any
-
 
 class TreeNode:
     def __init__(self, data):
@@ -19,6 +17,3 @@ class TreeNode:
         self.leftchild = None
         self.rightchild = None
 
-
-bt = TreeNode('Drinks')
-        
