@@ -94,3 +94,5 @@ def delete_node(rootnode, node):
         return "Failed to delete"
 
 delete_node(newbt, 'Hot')
+
+
