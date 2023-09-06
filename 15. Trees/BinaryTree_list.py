@@ -42,4 +42,4 @@ newbt.customlist
 
 newbt.searchnode('Fanta')
 
-newbt.preordertraversal(0)
+newbt.preordertraversal(3)
