@@ -120,6 +120,14 @@ def deletenode(rootnode, nodevalue):
 
 # Need to understand this piece of code
 
+
+def deletebst(bst):
+    bst.data = None
+    bst.leftchild = None
+    bst.rightchild = None
+    
+
+
 newbst = BSTNode(None)
 
 insertnode(newbst,70)
