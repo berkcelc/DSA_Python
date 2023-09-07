@@ -87,6 +87,39 @@ def searchnode(rootnode, nodevalue):
     
 
 
+def minval(bstnode):
+    current = bstnode
+    while current.leftchild is not None:
+        current = current.leftchild
+    return current
+
+
+def deletenode(rootnode, nodevalue):
+    if rootnode is None:
+        return rootnode
+    if nodevalue < rootnode.data:
+        rootnode.leftchild = deletenode(rootnode.leftchild, nodevalue)
+    elif nodevalue > rootnode.data:
+        rootnode.rightchild = deletenode(rootnode.rightchild, nodevalue)
+
+    else:
+        if rootnode.leftchild is None:
+            temp = rootnode.rightchild
+            rootnode = None
+            return temp
+        
+        if rootnode.rightchild is None:
+            temp = rootnode.leftchild
+            rootnode = None
+            return temp
+        
+        temp = minval(rootnode.rightchild)
+        rootnode.data = temp.data
+        rootnode.rightchild = deletenode(rootnode.rightchild, temp.data)
+    return rootnode
+
+# Need to understand this piece of code
+
 newbst = BSTNode(None)
 
 insertnode(newbst,70)
