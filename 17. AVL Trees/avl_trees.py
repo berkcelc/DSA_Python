@@ -61,3 +61,48 @@ def searchnode(rootnode, nodevalue):
     
 
 # Inserting a node in avl tree
+
+# first we will be creating some helper functions 
+
+def getheight(rootnode):
+    if not rootnode:
+        return 0
+    return rootnode.height
+
+def rightrotate(disbalancedNode):
+    newroot = disbalancedNode.leftchild
+    disbalancedNode.leftchild = newroot.rigtchild
+    newroot.rightchild = disbalancedNode
+    disbalancedNode.height = 1 + max(getheight(disbalancedNode.leftchild), getheight(disbalancedNode.rightchild))
+    newroot.height = 1 + max(getheight(newroot.leftchild), getheight(newroot.rightchild))
+    return newroot
+
+def leftrotate(disbalancedNode):
+    newroot = disbalancedNode.rightchild
+    disbalancedNode.rightchild = newroot.leftchild
+    newroot.leftchild = disbalancedNode
+    disbalancedNode.height = 1 + max(getheight(disbalancedNode.leftchild), getheight(disbalancedNode.rightchild))
+    newroot.height = 1 + max(getheight(newroot.leftchild), getheight(newroot.rightchild))
+    return newroot
+
+def getbalance(rootnode):
+    if not rootnode:
+        return 0
+    return getheight(rootnode.leftchild) - getheight(rootnode.rightchild)
+
+
+def insertnode(rootnode, value):
+    if not rootnode:
+        return AVLNode(value)
+    elif value < rootnode.data:
+        rootnode.leftchild = insertnode(rootnode.leftchild, value)
+    else:
+        rootnode.rightchild = insertnode(rootnode.rightchild, value)
+    rootnode.height  = 1 + max(getheight(rootnode.leftchild), getheight(rootnode.rightchild))
+    balance = getbalance(rootnode)
+
+
+
+
+
+
