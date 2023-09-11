@@ -101,6 +101,79 @@ def insertnode(rootnode, value):
     rootnode.height  = 1 + max(getheight(rootnode.leftchild), getheight(rootnode.rightchild))
     balance = getbalance(rootnode)
 
+    #now we will be checking the imbalance condition and 
+    # balance it using rotation 
+
+    if balance > 1 and value < rootnode.leftchild.data:
+        return rightrotate(rootnode)
+    if balance > 1 and value > rootnode.leftchild.data:
+        rootnode.leftchild = leftrotate(rootnode.leftchild)
+        return rightrotate(rootnode)
+    if balance < -1 and value > rootnode.rightchild.data:
+        return leftrotate(rootnode)
+    if balance < -1 and value < rootnode.rightchild.data:
+        rootnode.rightchild = rightrotate(rootnode.rightchild)
+        return leftrotate(rootnode)
+    return rootnode
+
+
+newavl =AVLNode(5)
+newavl = insertnode(newavl,10)
+newavl = insertnode(newavl,15)
+newavl = insertnode(newavl,20)
+newavl = insertnode(newavl,25)
+newavl = insertnode(newavl,30)
+
+
+# Time complexity = O(logn)
+# Space Complexity = O(logn)
+
+
+# Deletion of Node in AVL Tree
+# for this we need to create some helper functions 
+def getminvaluenode(rootnode):
+    if rootnode is None or rootnode.leftchild is None:
+        return rootnode
+    return getminvaluenode(rootnode.leftchild)
+
+def deletenode(rootnode, value):
+    if not rootnode:
+        return rootnode
+    elif value < rootnode.data:
+        rootnode.leftchild = deletenode(rootnode.leftchild, value)
+    elif value > rootnode.data:
+        rootnode.rightchild = deletenode(rootnode.rightchild, value)
+    else:
+        if rootnode.leftchild is None:
+            temp = rootnode.rightchild
+            rootnode = None
+            return temp
+        elif rootnode.leftchild is None:
+            temp = rootnode.rightchild
+            rootnode = None
+            return temp
+        temp = getminvaluenode(rootnode.rightchild)
+        rootnode.data = temp.data
+        rootnode.righthcild = deletenode(rootnode.rightchild, temp.data)
+    balance = getbalance(rootnode)
+
+    if balance > 1 and getbalance(rootnode.leftchild) >= 0:
+        return rightrotate(rootnode)
+    if balance < -1 and getbalance(rootnode.rightchild) <= 0:
+        return leftrotate(rootnode)
+    if balance > 1 and getbalance(rootnode.leftchild) < 0:
+        rootnode.leftchild = leftrotate(rootnode.leftchild)
+        return rightrotate(rootnode)
+    if balance < -1 and getbalance(rootnode.rightchild) > 0:
+        rootnode.righchild = rightrotate(rootnode.rightchild)
+        return leftrotate(rootnode)
+    return rootnode
+
+
+
+
+
+
 
 
 
