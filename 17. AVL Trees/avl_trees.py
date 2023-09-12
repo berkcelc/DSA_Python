@@ -117,12 +117,7 @@ def insertnode(rootnode, value):
     return rootnode
 
 
-newavl =AVLNode(5)
-newavl = insertnode(newavl,10)
-newavl = insertnode(newavl,15)
-newavl = insertnode(newavl,20)
-newavl = insertnode(newavl,25)
-newavl = insertnode(newavl,30)
+
 
 
 # Time complexity = O(logn)
@@ -169,13 +164,27 @@ def deletenode(rootnode, value):
         return leftrotate(rootnode)
     return rootnode
 
+newavl =AVLNode(5)
+newavl = insertnode(newavl,10)
+newavl = insertnode(newavl,15)
+newavl = insertnode(newavl,20)
+newavl = insertnode(newavl,25)
+newavl = insertnode(newavl,30)
+
+newavl = deletenode(newavl, 10)
+
+levelordertraversal(newavl)
+
+# time complexity O(logn)
+# space complexity O(logn)
 
 
 
+# deleting entire avl tree
 
-
-
-
-
-
+def deleteavltree(rootnode):
+    rootnode.data = None
+    rootnode.leftchild = None
+    rootnode.rightchild = None
+    return "The avl tree is deleted"
 
